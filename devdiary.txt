@@ -1,0 +1,53 @@
+Hello, this is the development/porting diary for this project!
+
+This text file is meant to guide other project hackers to get started working on the Archie source code.
+
+It's advised to use a UNIX OS for developemnt (Linux in my case), as it's easier and more in-line with the original target OS of Arche (SunOS, a UNIX vairant).
+
+The original source code, along with other files (patches, backups, configs, modules) can be downloaded form the original host using the following command
+
+`` alias gimmenetfolder='wget -r -np -R "index.html*"' ``
+
+followed by;
+
+`` gimmenetfolder https://files.serialport.org/archie/archie-3.5-beta/ ``
+
+This alias will tell wget to download all files from the archive, without downloading the actual raw index pages or following links outside the host (files.serialport.org)
+
+After running wget, your working tree should look like this
+
+```
+tree -a
+
+.
+└── files.serialport.org
+    └── archie
+        └── archie-3.5-beta
+            ├── archie.src.tgz
+            └── dist
+                ├── 0README
+                ├── archie-3.5-base.tgz
+                ├── archie-3.5-install.tar
+                ├── archie-3.5-sunos-5.4-A.tgz
+                ├── archie-3.5-sunos-5.4-B.tgz
+                ├── manual-3.5.ps.gz
+                ├── unrotate
+                ├── untar
+                ├── unwrap
+                └── updates
+                    ├── archie-update-3.5-sunos-5.4-1.tgz
+                    ├── archie-update-3.5-sunos-5.4-2.tgz
+                    ├── archie-update-3.5-sunos-5.4-3.tgz
+                    ├── archie-update-3.5-sunos-5.4-4.tgz
+                    ├── archie-update-3.5-sunos-5.4-5.tgz
+                    ├── ardomains.gz
+                    ├── config
+                    │   └── Makefile
+                    ├── dirsrv.gz
+                    ├── email-client.gz
+                    ├── net_anonftp.gz
+                    ├── telnet-client.gz
+                    └── Version
+
+6 directories, 22 files
+```
